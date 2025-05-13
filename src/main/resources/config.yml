@@ -1,0 +1,6 @@
+debug: true
+
+messages:
+  default:
+    message: "Hola Mundo"
+    interval: 10 
