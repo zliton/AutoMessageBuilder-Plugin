@@ -1,6 +1,111 @@
-debug: true
+
+#
+#    _         _         __  __                                ___        _  _     _             _     __     ___ 
+#   /_\  _  _ | |_  ___ |  \/  | ___  ___ ___ __ _  __ _  ___ | _ ) _  _ (_)| | __| | ___  _ _  / |   /  \   |_  )
+#  / _ \| || ||  _|/ _ \| |\/| |/ -_)(_-<(_-</ _` |/ _` |/ -_)| _ \| || || || |/ _` |/ -_)| '_| | | _| () |_  / / 
+# /_/ \_\\_,_| \__|\___/|_|  |_|\___|/__//__/\__,_|\__, |\___||___/ \_,_||_||_|\__,_|\___||_|   |_|(_)\__/(_)/___|
+#                                                  |___/                                                          
+#
+# Powered by Lit.s and KrystalFox dev Studio
+#
+# Links:
+#
+#   Lit.s: https://github.com/zliton
+#   KrystalFox:https://krystalfox-studio.gitbook.io/home
+#
+
+
+
+
+
+
+#Plugin Messages 
 
 messages:
-  default:
-    message: "Hola Mundo"
-    interval: 10 
+
+  #   If a player does not have permissions it will show this message, 
+  #   they can use permission managers like:
+  #   
+  #    - Luckperms
+  #    - Vault
+  #    - ETC
+
+  non-permission: §4You don't have permission to use this command. 
+
+  #   If there are no automatic messages to display in the database, 
+  #   this message will be displayed.
+
+  non-message: §4There are no automatic messages to run.
+
+
+  #   Success Messages
+  #
+  success:
+
+
+    create: §2 Message created succesfully!!
+    delete: §2 Message deleted succesfully!!
+
+
+
+
+
+
+
+#
+#   Additional settings for managing automatic messages.
+#
+#
+automessage:
+
+
+  #
+  #   If you want automatic messages to run randomly, enable this option.
+  #   In terms of performance, if you enable this option, 
+  #   you will have less RAM load on the server than running a single loop.
+  #
+  #   true|false
+  #
+
+  random: true
+
+  #
+  # Interval in seconds of the automatic random message
+  #
+
+  interval: 25
+
+
+
+#
+#   SQL database system
+#   
+#   Configure your SQL database to save automatic messages
+#
+
+database:
+
+  #
+  # For Databases SQLite (Default)
+  #
+  sqlite:
+    
+    enabled: true
+
+    connection:
+      file: automessage.db
+  
+
+  #
+  # For MySQL databases for multiple servers
+  #
+  mysql:
+
+    enabled: false
+
+    connection:
+      username: root
+      password: 
+      database: db_server
+      hostname: localhost
+      port: 3306

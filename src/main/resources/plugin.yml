@@ -1,24 +1,43 @@
 name: AutoMessageBuilder
-version: 1.0.0
-main: io.com.automessagebuilder.AutoMessageBuilder 
+version: 1.0.2
+main: com.automessagebuilder.Plugin
 description: Messaging Plugin
 author: lit.dll
-website: https://papermc.io
+website: https://github.com/zliton/AutoMessageBuilder-Plugin
 api-version: '1.20'
-
+depend: ["PlaceholderAPI"]
 
 commands:
   automessage:
-    description: "Controla los mensajes automáticos"
-    usage: |
-      /automessage set <id> <mensaje> <interval> - Inicia los mensajes
-      /automessage delete <id>  - Borra mensajes
-      /automessage list - Muestra todos los mensajes
-      
-    permission: 
-      automessagebuilder.use
-      automessagebuilder.delete
-      automessagebuilder.list
-      automessagebuilder.add
-      
-    aliases: [ "am" ]
+    description: Sends an automated timer message
+    usage: /automessage 
+    aliases: [amb, automb]
+    permission: automessagebuilder.automessage
+
+permissions:
+  automessagebuilder.automessage:
+    description: "/automessage permission for AutoMessageBuilder"
+    default: op
+
+  automessagebuilder.automessage.list:
+    description: "/automessage list permission for AutoMessageBuilder"
+    default: op
+
+  automessagebuilder.automessage.add:
+    description: "/automessage add permission for AutoMessageBuilder"
+    default: op
+  
+  automessagebuilder.automessage.update:
+    description: "/automessage set permission for AutoMessageBuilder"
+    default: op
+
+  automessagebuilder.automessage.delete:
+    description: "/automessage delete permission for AutoMessageBuilder"
+    default: op
+
+
+  automessagebuilder.*:
+    description: "All permissions for AutoMessageBuilder"
+    default: op
+    children:
+      automessagebuilder.automessage.*: true
