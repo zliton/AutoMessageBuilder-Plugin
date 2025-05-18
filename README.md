@@ -86,7 +86,9 @@ database:
     mvn package
   ```
 
-  Al terminar la compilacion se generada un archivo automessagebuilder-1.0.2.jar en la carpeta target, puedes copiar el archivo y agregarlo a tu servidor : D
+  El plugin tiene compatibilidad con PlaceholderAPI se recomienda descargarlo [PlaceHolderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) y añadirlo a tu   servidor
+
+  Al terminar la compilacion se generada un archivo automessagebuilder-1.0.2.jar en la carpeta target, puedes copiar el archivo y agregarlo a tu servidor
   
 
 
